@@ -1,0 +1,23 @@
+{% extends "calleasy_firstapp/base.html" %}
+{% block body_block %}
+
+<div class="container">
+  <div class="jumbotron">
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Please Register here:</h1>
+        <p>
+        </p>
+        <h2>So that you can get the latest updates If any!</h2>
+        <p></p>
+        <form method="post">
+          {{ form.as_p}}
+          {% csrf_token %}
+          <input type="submit" class='btn btn-primary' value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

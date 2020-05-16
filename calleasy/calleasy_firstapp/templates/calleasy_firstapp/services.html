@@ -1,0 +1,16 @@
+{% extends "calleasy_firstapp/base.html" %}
+{% load static %}
+{% block body_block %}
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Best Services!</h1>
+    <h1>With The Best Ratings</h1>
+    <img src="{% static "images/electricman.jpg" %}" alt="Uh Oh, didn't show!">
+    <form action="{% url 'calleasy_firstapp:electrician' %}">
+         <button type="submit">Electrician</button>
+      </form>
+  </div>
+</div>
+
+{% endblock %}

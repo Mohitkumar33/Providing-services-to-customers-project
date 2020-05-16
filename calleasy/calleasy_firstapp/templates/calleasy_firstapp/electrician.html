@@ -1,0 +1,25 @@
+{% extends "calleasy_firstapp/base.html" %}
+{% load static %}
+{% block body_block %}
+<div class="container">
+  <div class="jumbotron">
+    <h1>Electricians With best ratings</h1>
+    <h2>All the electricians are KYC verified</h2>
+    {% if electrician %}
+        <ol>
+          {% for person in electrician %}
+            <li>Hire Me!</li>
+            <ul>
+              <li>Name: {{person.name}}</li>
+              <li>Jobs Done: {{person.jobs_done}}</li>
+              <li>Skill Age: {{person.skill_age}}</li>
+              <li>Rating : {{person.rating}}</li>
+              <li>Phone Number 1: {{person.phone_number_1}}</li>
+              <li>Phone Number 2: {{person.phone_number_2}}</li>
+            </ul>
+          {% endfor %}
+        </ol>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
